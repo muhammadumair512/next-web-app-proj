@@ -633,7 +633,7 @@ const Main: FC = () => {
 
       <div className="flex justify-center rounded-t-2xl bg-white overflow-hidden font-heebo ">
         {/* Main content adjusted to 90% width */}
-        <div className='flex-grow flex flex-col w-full h-[calc(100vh_-_3rem)] overflow-y-hidden overflow-x-hidden mt-1 font-heebo '>
+        <div className='customScrollbar flex-grow flex flex-col w-full h-[calc(100vh_-_3rem)] overflow-y-auto overflow-x-hidden mt-1 font-heebo '>
           <ConfigSence
             // conversationName={conversationName}
             hasSetInputs={hasSetInputs}

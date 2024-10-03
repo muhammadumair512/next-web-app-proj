@@ -3,6 +3,34 @@
     0px 4px 6px -2px rgba(16, 24, 40, 0.03);
 }
 
+/* customized scroll bar */
+@tailwind utilities;
+
+@layer utilities {
+  .customScrollbar {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #3b82f6 #e5e7eb; /* Thumb color (blue-500), Track color (gray-200) */
+  }
+
+  /* Webkit browsers */
+  .customScrollbar::-webkitscrollbar {
+    width: 4px;
+  }
+  .customScrollbar::-webkitscrollbar-track {
+    background: #e5e7eb; /* gray-200 */
+  }
+  .customScrollbar::-webkitscrollbar-thumb {
+    background-color: #3b82f6; /* blue-500 */
+    border-radius: 4px;
+    border: 2px solid transparent;
+  }
+  .customScrollbar::-webkitscrollbar-thumb:hover {
+    background-color: #2563eb; /* blue-600 */
+  }
+}
+
+/* till here */
+
 .bgGrayColor {
   background-color: #f9fafb;
 }
