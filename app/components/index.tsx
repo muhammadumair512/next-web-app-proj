@@ -2,6 +2,7 @@
 'use client'
 import type { FC } from 'react'
 import './welcome/style.module.css'
+
 import React, { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import produce, { setAutoFreeze } from 'immer'
@@ -96,7 +97,7 @@ const Main: FC = () => {
     return isChatStarted
   })()
 
-  // const conversationName = currConversationInfo?.name || t('app.chat.newChatDefaultName') as string
+  const conversationName = currConversationInfo?.name || t('app.chat.newChatDefaultName') as string
   const conversationIntroduction = currConversationInfo?.introduction || ''
 
   const handleConversationSwitch = () => {
@@ -264,7 +265,7 @@ const Main: FC = () => {
   }, [])
 
   const [isResponding, { setTrue: setRespondingTrue, setFalse: setRespondingFalse }] = useBoolean(false)
-  const [setAbortController] = useState<AbortController | null>(null)
+  const [abortController, setAbortController] = useState<AbortController | null>(null)
   const { notify } = Toast
   const logError = (message: string) => {
     notify({ type: 'error', message })
@@ -290,9 +291,9 @@ const Main: FC = () => {
 
   // const [controlFocus, setControlFocus] = useState(0)
   // const [openingSuggestedQuestions, setOpeningSuggestedQuestions] = useState<string[]>([])
-  // const [messageTaskId, setMessageTaskId] = useState('')
+  const [messageTaskId, setMessageTaskId] = useState('')
   // const [hasStopResponded, setHasStopResponded, getHasStopResponded] = useGetState(false)
-  const [isRespondingConIsCurrCon, setIsRespondingConCurrCon, getIsRespondingConIsCurrCon] = useGetState(true)
+  // const [isRespondingConIsCurrCon, setIsRespondingConCurrCon, getIsRespondingConIsCurrCon] = useGetState(true)
   // const [userQuery, setUserQuery] = useState('')
 
   const updateCurrentQA = ({
