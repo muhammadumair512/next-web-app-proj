@@ -2,8 +2,11 @@
 
 module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}', // Include files in the 'pages' folder
+    './layouts/**/*.{js,ts,jsx,tsx}', // Include files in the 'layouts' folder
+    './app/**/*.{js,ts,jsx,tsx}', // Include files in the 'app' folder
+    './components/**/*.{js,ts,jsx,tsx}', // Include files in the 'components' folder
+    './src/**/*.{js,ts,jsx,tsx}', // Include files in the 'src' folder
   ],
   theme: {
     typography: require('./typography'),
@@ -16,6 +19,8 @@ module.exports = {
       colors: {
         customMint: '#6fffe6',
         customDarkBlue: '#003250',
+        primaryColor: '#003250',
+        secColor: '#6FFFE6',
         gray: {
           50: '#F9FAFB',
           100: '#F3F4F6',
@@ -42,7 +47,6 @@ module.exports = {
           50: '#F3FAF7',
           100: '#DEF7EC',
           800: '#03543F',
-
         },
         yellow: {
           100: '#FDF6B2',
@@ -59,11 +63,8 @@ module.exports = {
       },
       screens: {
         mobile: '100px',
-        // => @media (min-width: 100px) { ... }
-        tablet: '640px', // 391
-        // => @media (min-width: 600px) { ... }
+        tablet: '640px',
         pc: '769px',
-        // => @media (min-width: 769px) { ... }
       },
     },
   },

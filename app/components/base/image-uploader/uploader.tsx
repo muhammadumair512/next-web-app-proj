@@ -78,7 +78,7 @@ const Uploader: FC<UploaderProps> = ({
 
   return (
     <div
-      className='mt-1 relative outline outline-2 outline-[#6FFFE6] text-[#003250] bg-white rounded-full !hover:bg-[#003250] hover:outline-[#003250] hover:text-[#6FFFE6] '
+      className='mt-1 relative outline outline-2 outline-[#6FFFE6] text-[#003250] bg-white rounded-full !hover:bg-customDarkBlue hover:outline-customDarkBlue  hover:text-[#6FFFE6] '
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >

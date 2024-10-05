@@ -37,7 +37,7 @@ const ImageLinkInput: FC<ImageLinkInputProps> = ({
       />
       <Button
         type='primary'
-        className='!h-6 text-xs ml-1  hover:outline-0 outline outline-2 outline-[#6FFFE6] text-black bg-white hover:bg-[#003250]  hover:text-[#6FFFE6] transition duration-300'
+        className='text-customDarkBlue !h-6 text-xs ml-1  hover:outline-0 outline outline-2 outline-[#6FFFE6]  bg-white hover:bg-[#003250]  hover:text-[#6FFFE6] transition duration-300'
         disabled={!imageLink}
         onClick={handleClick}
       >

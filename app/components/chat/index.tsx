@@ -153,7 +153,7 @@ const Chat: FC<IChatProps> = ({
               {
                 visionConfig?.enabled && (
                   <>
-                    <div className='border-2 border-[#6FFFE6] absolute bottom-2 left-2 flex items-center'>
+                    <div className='text-customDarkBlue border-2 border-[#6FFFE6] absolute bottom-2 left-2 flex items-center'>
                       <div className="  ">
                         <ChatImageUploader
                           settings={visionConfig}
@@ -188,7 +188,7 @@ const Chat: FC<IChatProps> = ({
                 autoSize
               />
               <div className="absolute bottom-2 right-2 flex items-center h-8">
-                <div className={`${s.count} mr-4 h-5 leading-5 text-sm bg-gray-50 text-gray-500`}>{query.trim().length}</div>
+                <div className={`${s.count}  mr-4 h-5 leading-5 text-sm bg-gray-50  text-gray-500`}>{query.trim().length}</div>
                 <Tooltip
                   selector='send-tip'
                   htmlContent={
@@ -198,7 +198,7 @@ const Chat: FC<IChatProps> = ({
                     </div>
                   }
                 >
-                  <div className={`${s.sendBtn} w-8 h-8 cursor-pointer rounded-md`} onClick={handleSend}></div>
+                  <div className={`${s.sendBtn} hover:bg-customDarkBlue w-8 h-8 cursor-pointer rounded-md`} onClick={handleSend}></div>
                 </Tooltip>
               </div>
             </div>

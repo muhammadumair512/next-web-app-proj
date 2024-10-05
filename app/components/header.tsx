@@ -30,7 +30,7 @@ const Header: FC<IHeaderProps> = ({
         : <div className='flex items-center justify-center h-8 w-15 cursor-pointer'
           onClick={() => onCreateNewChat?.()}
         >
-          <Button className=' flex items-center justify-center px-4 py-2 border-2 border-[#6FFFE6] text-[#003250] bg-white rounded-full hover:bg-[#003250] hover:border-[#003250] hover:text-[#6FFFE6] transition duration-300 whitespace-nowrap'>{'Start New Chat'}</Button>
+          <Button className=' flex items-center justify-center px-4 py-2 border border-2 border-secColor text-primaryColor bg-white rounded-full hover:bg-customDarkBlue hover:border-customDarkBlue hover:text-secColor transition duration-300 whitespace-nowrap'>{'Start New Chat'}</Button>
           {/* <PencilSquareIcon className="h-4 w-4 text-gray-500" /> */}
         </div>
       }
