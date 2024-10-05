@@ -78,14 +78,14 @@ const Uploader: FC<UploaderProps> = ({
 
   return (
     <div
-      className='relative'
+      className='mt-1 relative outline outline-2 outline-[#6FFFE6] text-[#003250] bg-white rounded-full !hover:bg-[#003250] hover:outline-[#003250] hover:text-[#6FFFE6] '
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >
       {children(hovering)}
       <input
-        className={`
-          absolute block inset-0 opacity-0 text-[0] w-full
+        className={` 
+          absolute block inset-0 opacity-0 text-[0] w-full  
           ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}
         `}
         onClick={e => (e.target as HTMLInputElement).value = ''}

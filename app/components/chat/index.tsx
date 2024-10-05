@@ -148,20 +148,23 @@ const Chat: FC<IChatProps> = ({
       </div>
       {
         !isHideSendInput && (
-          <div className={cn(!feedbackDisabled && '!left-3.5 !right-3.5', 'absolute z-10 bottom-0 left-0 right-0 mb-2')}>
-            <div className='p-[5.5px] max-h-[150px] bg-white border-[1.5px] border-gray-200 rounded-xl overflow-y-auto'>
+          <div className={cn(!feedbackDisabled && 'mb-[40px] !left-3.5 !right-3.5', 'absolute z-10 bottom-0 left-0 right-0 mb-2')}>
+            <div className=' p-[5.5px] max-h-[150px] bg-white border-[1.5px] border-gray-200 rounded-xl overflow-y-auto'>
               {
                 visionConfig?.enabled && (
                   <>
-                    <div className='absolute bottom-2 left-2 flex items-center'>
-                      <ChatImageUploader
-                        settings={visionConfig}
-                        onUpload={onUpload}
-                        disabled={files.length >= visionConfig.number_limits}
-                      />
-                      <div className='mx-1 w-[1px] h-4 bg-black/5' />
+                    <div className='border-2 border-[#6FFFE6] absolute bottom-2 left-2 flex items-center'>
+                      <div className="  ">
+                        <ChatImageUploader
+                          settings={visionConfig}
+                          onUpload={onUpload}
+                          disabled={files.length >= visionConfig.number_limits}
+                        />
+                      </div>
                     </div>
-                    <div className='pl-[52px]'>
+                    <div className='mx-1 w-[1px] h-4 bg-black/5' />
+
+                    <div className='pl-[52px]   '>
                       <ImageList
                         list={files}
                         onRemove={onRemove}
@@ -174,8 +177,8 @@ const Chat: FC<IChatProps> = ({
                 )
               }
               <Textarea
-                className={`  
-                  block w-[90%]  px-2 pr-[118px] py-[7px] leading-5 max-h-none text-sm text-gray-700 outline-none appearance-none resize-none
+                className={`border-2 border-[#6FFFE6] rounded-lg
+                  block w-[90%] mr-1  px-2 pr-[118px] py-[7px] leading-5 max-h-none text-sm text-gray-700 outline-none appearance-none resize-none
                   ${visionConfig?.enabled && 'pl-12'}
                 `}
                 value={query}
@@ -184,7 +187,7 @@ const Chat: FC<IChatProps> = ({
                 onKeyDown={handleKeyDown}
                 autoSize
               />
-              <div className="absolute bottom-0 right-0 flex items-center h-8">
+              <div className="absolute bottom-2 right-2 flex items-center h-8">
                 <div className={`${s.count} mr-4 h-5 leading-5 text-sm bg-gray-50 text-gray-500`}>{query.trim().length}</div>
                 <Tooltip
                   selector='send-tip'

@@ -33,7 +33,7 @@ const Tooltip: FC<TooltipProps> = ({
       <ReactTooltip
         id={selector}
         content={content}
-        className={classNames('!bg-white !text-xs !font-normal !text-gray-700 !shadow-lg !opacity-100', className)}
+        className={classNames('!bg-white !text-xs !font-normal !text-gray-700 !shadow-lg !opacity-100 hover:bg-[#003250]', className)}
         place={position}
         clickable={clickable}
       >

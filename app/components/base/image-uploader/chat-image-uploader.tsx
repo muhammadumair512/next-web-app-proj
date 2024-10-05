@@ -24,18 +24,20 @@ const UploadOnlyFromLocal: FC<UploadOnlyFromLocalProps> = ({
   limit,
 }) => {
   return (
-    <Uploader onUpload={onUpload} disabled={disabled} limit={limit}>
-      {
-        hovering => (
-          <div className={`
-            relative flex items-center justify-center w-8 h-8 rounded-lg cursor-pointer
-            ${hovering && 'bg-gray-100'}
-          `}>
-            <ImagePlus className='w-4 h-4 text-gray-500' />
-          </div>
-        )
-      }
-    </Uploader>
+    <div className="">
+      <Uploader onUpload={onUpload} disabled={disabled} limit={limit}>
+        {
+          hovering => (
+            <div className={` 
+              relative flex items-center justify-center w-8 h-8 rounded-lg cursor-pointer
+              ${hovering && 'bg-gray-100'}
+            `}>
+              <ImagePlus className='w-4 h-4 text-gray-500' />
+            </div>
+          )
+        }
+      </Uploader>
+    </div>
   )
 }
 
@@ -69,21 +71,23 @@ const UploaderButton: FC<UploaderButtonProps> = ({
   }
 
   return (
+
     <PortalToFollowElem
       open={open}
       onOpenChange={setOpen}
       placement='top-start'
     >
+
       <PortalToFollowElemTrigger onClick={handleToggle}>
-        <div className={`
-          relative flex items-center justify-center w-8 h-8 hover:bg-gray-100 rounded-lg
+        <div className={` 
+        relative flex items-center justify-center w-8 h-8 hover:bg-gray-100 rounded-lg
           ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}
         `}>
           <ImagePlus className='w-4 h-4 text-gray-500' />
         </div>
       </PortalToFollowElemTrigger>
-      <PortalToFollowElemContent className='z-50'>
-        <div className='p-2 w-[260px] bg-white rounded-lg border-[0.5px] border-gray-200 shadow-lg'>
+      <PortalToFollowElemContent className='z-50 border-[0.5px] border-gray-200'>
+        <div className='p-2 w-[300px] bg-white rounded-lg border-[0.5px] border-gray-200 shadow-lg'>
           <ImageLinkInput onUpload={handleUpload} />
           {
             hasUploadFromLocal && (
@@ -111,7 +115,7 @@ const UploaderButton: FC<UploaderButtonProps> = ({
           }
         </div>
       </PortalToFollowElemContent>
-    </PortalToFollowElem>
+    </PortalToFollowElem >
   )
 }
 
@@ -138,12 +142,14 @@ const ChatImageUploader: FC<ChatImageUploaderProps> = ({
   }
 
   return (
-    <UploaderButton
-      methods={settings.transfer_methods}
-      onUpload={onUpload}
-      disabled={disabled}
-      limit={+settings.image_file_size_limit!}
-    />
+    <div className="">
+      <UploaderButton
+        methods={settings.transfer_methods}
+        onUpload={onUpload}
+        disabled={disabled}
+        limit={+settings.image_file_size_limit!}
+      />
+    </div>
   )
 }
 

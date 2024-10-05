@@ -615,7 +615,7 @@ const Main: FC = () => {
   // const imageUrl = '@/public/link_worldwide_logo (2).jpeg' // Put the URL of your image here
 
   return (
-    <div className='bg-gray-100 overflow-hidden'>
+    <div className='bg-gray-100 overflow-hidden font-sans'>
       {/* Header with picture */}
       <Header
         title={APP_INFO.title}
@@ -631,9 +631,9 @@ const Main: FC = () => {
         /> */}
       </Header>
 
-      <div className="flex justify-center rounded-t-2xl bg-white overflow-hidden font-heebo ">
+      <div className="flex justify-center rounded-t-2xl bg-white overflow-hidden font-sans ">
         {/* Main content adjusted to 90% width */}
-        <div className='customScrollbar flex-grow flex flex-col w-full h-[calc(100vh_-_3rem)] overflow-y-auto overflow-x-hidden mt-1 font-heebo '>
+        <div className=' flex-grow flex flex-col w-full h-[calc(100vh_-_3rem)] overflow-y-auto overflow-x-hidden mt-1 font-sans'>
           <ConfigSence
             // conversationName={conversationName}
             hasSetInputs={hasSetInputs}

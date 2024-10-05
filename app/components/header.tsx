@@ -1,8 +1,9 @@
 import type { FC } from 'react'
 import React from 'react'
-import {
-  PencilSquareIcon,
-} from '@heroicons/react/24/solid'
+
+import { PencilSquareIcon } from '@heroicons/react/20/solid'
+import Button from '@/app/components/base/button'
+
 import AppIcon from '@/app/components/base/app-icon'
 export type IHeaderProps = {
   title: string
@@ -17,18 +18,20 @@ const Header: FC<IHeaderProps> = ({
   onCreateNewChat,
 }) => {
   return (
-    <div className="shrink-0 flex items-center justify-between  h-12 px-3 bg-gray-100">
+    <div className="shrink-0 flex items-center justify-between h-[80px] border-b-4  border-solid border-[#6fffe6] border-l-0 border-r-0 border-t-0 text-[003250]   px-3 bg-white">
       {isMobile
         ? (
-          <div className='flex items-center justify-center h-8 w-8 cursor-pointer'
+          <div className='mr-1 flex items-center justify-center h-8 w-8 cursor-pointer'
             onClick={() => onCreateNewChat?.()}
           >
-            <PencilSquareIcon className="h-4 w-4 text-gray-500" />
+            <PencilSquareIcon className="h-4 w-4  text-gray-500" />
+            {/* <Button className='ml-[150px] flex items-center justify-center px-4 py-2 border-2 border-[#6FFFE6] text-[#003250] bg-white rounded-full hover:bg-[#003250] hover:border-[#003250] hover:text-[#6FFFE6] transition duration-300 whitespace-nowrap'>{'Start New Chat'}</Button> */}
           </div>)
-        : <div className='flex items-center justify-center h-8 w-8 cursor-pointer'
+        : <div className='flex items-center justify-center h-8 w-15 cursor-pointer'
           onClick={() => onCreateNewChat?.()}
         >
-          <PencilSquareIcon className="h-4 w-4 text-gray-500" />
+          <Button className=' flex items-center justify-center px-4 py-2 border-2 border-[#6FFFE6] text-[#003250] bg-white rounded-full hover:bg-[#003250] hover:border-[#003250] hover:text-[#6FFFE6] transition duration-300 whitespace-nowrap'>{'Start New Chat'}</Button>
+          {/* <PencilSquareIcon className="h-4 w-4 text-gray-500" /> */}
         </div>
       }
 
@@ -45,8 +48,8 @@ const Header: FC<IHeaderProps> = ({
       {/*  removed classes flex items-start space-x-4 ml-0 */}
       <div className="flex-grow flex items-center justify-center space-x-4 ">
         <AppIcon size="small" />
-        <div className="text-sm text-gray-800 font-bold font-domine ">
-          Link Product Design <br /> Assistant (Coca-Cola)
+        <div className="text-sm  font-bold font-sans text-[#003250]  ">
+          LINK PRODUCT DESIGN ASSISTANT (COCA-COLA)
         </div>
       </div>
 

@@ -70,7 +70,7 @@ const Welcome: FC<IWelcomeProps> = ({
     if (!promptConfig)
       return ''
     const res = promptConfig.prompt_template.replace(regex, (match, p1) => {
-      return `<span class='text-gray-800 font-bold'>${inputs?.[p1] ? inputs?.[p1] : match}</span>`
+      return `<span class='text-gray-800 font-bold '>${inputs?.[p1] ? inputs?.[p1] : match}</span>`
     })
     return res
   })()
@@ -91,7 +91,7 @@ const Welcome: FC<IWelcomeProps> = ({
 
   const renderInputs = () => {
     return (
-      <div className='space-y-3'>
+      <div className='space-y-3 font-sans'>
         {promptConfig.prompt_variables.map(item => (
           <div className='tablet:flex items-start mobile:space-y-2 tablet:space-y-0 mobile:text-xs tablet:text-sm' key={item.key}>
             <label className={`flex-shrink-0 flex items-center tablet:leading-9 mobile:text-gray-700 tablet:text-gray-900 mobile:font-medium pc:font-normal ${s.formLabel}`}>{item.name}</label>

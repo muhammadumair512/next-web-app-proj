@@ -6,7 +6,7 @@ import Welcome from '../welcome'
 const ConfigSence: FC<IWelcomeProps> = (props) => {
   return (
     // mb-5 antialiased font-sans overflow-hidden shrink-0
-    <div className=''>
+    <div className='font-sans'>
       <Welcome {...props} />
     </div>
   )

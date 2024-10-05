@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 import Image from 'next/image'
 import style from './style.module.css'
-import headerImage from '@/public/link_worldwide_logo (2).jpeg'
+import headerImage from '@/public/link-logo.svg'
 // import headerImage from '../public/link_worldwide_logo (2).jpeg'
 
 export type AppIconProps = {
@@ -17,23 +17,23 @@ export type AppIconProps = {
 const AppIcon: FC<AppIconProps> = ({
   size = 'medium',
   rounded = false,
-  background,
+  // background,
   className,
 }) => {
   return (
     <span
       className={classNames(
-        style.appIcon,
+        // style.appIcon,
         size !== 'medium' && style[size],
         rounded && style.rounded,
         className ?? '',
       )}
       style={{
-        background,
+        // background,
       }}
     >
       <Image src={headerImage} alt="Header Image" width={100} height={100}
-        className="w-12 h-8 rounded-md object-cover ml-0"
+        className="w-12 h-8 rounded-md object-fit ml-0"
       />
     </span>
   )

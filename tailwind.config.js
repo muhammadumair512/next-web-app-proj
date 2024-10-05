@@ -11,8 +11,11 @@ module.exports = {
       fontFamily: {
         domine: ['Domine', 'serif'], // Add the Domine font
         heebo: ['Heebo', 'sans-serif'], // Adding Heebo font
+        sans: ['Arial', 'sans-serif'], // Use Arial as the default sans-serif font
       },
       colors: {
+        customMint: '#6fffe6',
+        customDarkBlue: '#003250',
         gray: {
           50: '#F9FAFB',
           100: '#F3F4F6',

@@ -106,8 +106,8 @@ export function PortalToFollowElem({
 }
 
 export const PortalToFollowElemTrigger = React.forwardRef<
-HTMLElement,
-React.HTMLProps<HTMLElement> & { asChild?: boolean }
+  HTMLElement,
+  React.HTMLProps<HTMLElement> & { asChild?: boolean }
 >(({ children, asChild = false, ...props }, propRef) => {
   const context = usePortalToFollowElemContext()
   const childrenRef = (children as any).ref
@@ -129,7 +129,7 @@ React.HTMLProps<HTMLElement> & { asChild?: boolean }
   return (
     <div
       ref={ref}
-      className='inline-block'
+      className='inline-block border-2 border-[#6FFFE6]'
       // The user can style the trigger based on the state
       data-state={context.open ? 'open' : 'closed'}
       {...context.getReferenceProps(props)}
@@ -141,8 +141,8 @@ React.HTMLProps<HTMLElement> & { asChild?: boolean }
 PortalToFollowElemTrigger.displayName = 'PortalToFollowElemTrigger'
 
 export const PortalToFollowElemContent = React.forwardRef<
-HTMLDivElement,
-React.HTMLProps<HTMLDivElement>
+  HTMLDivElement,
+  React.HTMLProps<HTMLDivElement>
 >(({ style, ...props }, propRef) => {
   const context = usePortalToFollowElemContext()
   const ref = useMergeRefs([context.refs.setFloating, propRef])
