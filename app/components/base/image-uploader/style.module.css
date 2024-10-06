@@ -1,0 +1,28 @@
+/* till here */
+.bgCustom {
+  background-color: #003250; /* Custom background color */
+}
+.customColor {
+  box-sizing: border-box;
+  background-color: white;
+  color: #003250;
+  border: solid 2px #6fffe6;
+  border-radius: 5px;
+}
+.customColor:hover {
+  /* background-color: #003250 !important; */
+  /* border: 2px solid #003250; */
+  color: #6fffe6;
+  border-radius: 5px;
+}
+
+.customInput {
+  border: solid 2px #6fffe6;
+  border-radius: 5px;
+  color: #003250;
+  outline: none;
+}
+.customInput:focus {
+  border: solid 2px #6fffe6;
+  outline: none;
+}

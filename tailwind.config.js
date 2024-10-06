@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
-module.exports = {
+export default {
+  // mode: 'jit',
   content: [
     './pages/**/*.{js,ts,jsx,tsx}', // Include files in the 'pages' folder
     './layouts/**/*.{js,ts,jsx,tsx}', // Include files in the 'layouts' folder
@@ -8,8 +9,9 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}', // Include files in the 'components' folder
     './src/**/*.{js,ts,jsx,tsx}', // Include files in the 'src' folder
   ],
+
   theme: {
-    typography: require('./typography'),
+    typography: require('./typography'), // If typography.js exports module, convert it to ES module too
     extend: {
       fontFamily: {
         domine: ['Domine', 'serif'], // Add the Domine font

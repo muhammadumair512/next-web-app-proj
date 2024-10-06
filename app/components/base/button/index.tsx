@@ -1,6 +1,7 @@
 import type { FC, MouseEventHandler } from 'react'
 import React from 'react'
 import Spinner from '@/app/components/base/spinner'
+import s from '@/app/components/welcome/style.module.css'
 
 export type IButtonProps = {
   type?: string
@@ -31,7 +32,7 @@ const Button: FC<IButtonProps> = ({
 
   return (
     <div
-      className={`flex justify-center items-center content-center h-9 leading-5 rounded-lg px-4 py-2 text-base ${style} ${className && className}`}
+      className={`${s.customColor} flex justify-center items-center content-center h-9 leading-5 rounded-lg px-4 py-2 text-base ${style} ${className && className}`}
       onClick={disabled ? undefined : onClick}
     >
       {children}

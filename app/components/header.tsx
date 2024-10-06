@@ -2,8 +2,8 @@ import type { FC } from 'react'
 import React from 'react'
 
 import { PencilSquareIcon } from '@heroicons/react/20/solid'
+import s from '@/app/components/welcome/style.module.css'
 import Button from '@/app/components/base/button'
-
 import AppIcon from '@/app/components/base/app-icon'
 export type IHeaderProps = {
   title: string
@@ -30,7 +30,7 @@ const Header: FC<IHeaderProps> = ({
         : <div className='flex items-center justify-center h-8 w-15 cursor-pointer'
           onClick={() => onCreateNewChat?.()}
         >
-          <Button className=' flex items-center justify-center px-4 py-2 border border-2 border-secColor text-primaryColor bg-white rounded-full hover:bg-customDarkBlue hover:border-customDarkBlue hover:text-secColor transition duration-300 whitespace-nowrap'>{'Start New Chat'}</Button>
+          <Button className={`${s.customColor} flex items-center justify-center px-4 py-2 border border-2 border-secColor text-primaryColor bg-white rounded-full hover:bg-red hover:border-customDarkBlue hover:text-secColor transition duration-300 whitespace-nowrap`} >{'Start New Chat'}</Button>
           {/* <PencilSquareIcon className="h-4 w-4 text-gray-500" /> */}
         </div>
       }

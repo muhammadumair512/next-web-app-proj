@@ -1,6 +1,7 @@
 import type { FC } from 'react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import s from './style.module.css'
 import Button from '@/app/components/base/button'
 import type { ImageFile } from '@/types/app'
 import { TransferMethod } from '@/types/app'
@@ -30,20 +31,21 @@ const ImageLinkInput: FC<ImageLinkInputProps> = ({
   return (
     <div className='flex items-center pl-1.5 pr-1 h-8 bg-white shadow-xs rounded-lg'>
       <input
-        className='appearance-none grow mr-0.5 px-1 h-[18px] text-[13px] rounded-lg  border border-2 border-[#6FFFE6] focus:border-[#6FFFE6] focus:outline-none'
+        className={`${s.customInput}  appearance-none grow mr-0.5 px-1 h-[18px] text-[13px] rounded-lg  `}
         value={imageLink}
         onChange={e => setImageLink(e.target.value)}
         placeholder={t('common.imageUploader.pasteImageLinkInputPlaceholder') || ''}
       />
       <Button
         type='primary'
-        className='text-customDarkBlue !h-6 text-xs ml-1  hover:outline-0 outline outline-2 outline-[#6FFFE6]  bg-white hover:bg-[#003250]  hover:text-[#6FFFE6] transition duration-300'
+        className={`${s.customColor}  transition duration-300 !h-6 text-xs ml-1`}
+
         disabled={!imageLink}
         onClick={handleClick}
       >
         {t('common.operation.ok')}
       </Button>
-    </div>
+    </div >
   )
 }
 

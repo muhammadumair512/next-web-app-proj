@@ -648,7 +648,7 @@ const Main: FC = () => {
 
           {hasSetInputs && (
             // removed claases relative grow h-[200px] pc:w-[794px] max-w-full mobile:w-full pb-[66px] mx-auto mb-3.5 overflow-hidden
-            <div className='relative grow w-full max-w-full mobile:w-full h-[100px] pb-[66px] mx-auto overflow-hidden p-[15px]   '>
+            <div className='relative grow w-full max-w-full mobile:w-full h-[100px] pb-[66px] mx-auto overflow-hidden p-[0px]   '>
               <div className='h-full overflow-y-auto ' ref={chatListDomRef}>
                 <Chat
                   chatList={chatList}

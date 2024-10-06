@@ -118,13 +118,13 @@ const Chat: FC<IChatProps> = ({
   }
 
   return (
-    <div className={cn(!feedbackDisabled && 'px-3.5', 'h-full')}>
+    <div className={cn(!feedbackDisabled && 'px-0', 'mr-0px', 'h-full')}>
       {/* Chat List */}
-      <div className={`${s.customScrollbar} overflow-x-hidden  h-full space-y-[30px] `}>
+      <div className={`${s.customScrollbar} pl-[20px] pr-[20px] overflow-x-hidden  h-full space-y-[30px] `}>
         {chatList.map((item) => {
           if (item.isAnswer) {
             const isLast = item.id === chatList[chatList.length - 1].id
-            return <div className="w-[65%]"><Answer
+            return <div className="w-[90%] md:w-[70%]"><Answer
               key={item.id}
               item={item}
               feedbackDisabled={feedbackDisabled}
@@ -134,7 +134,7 @@ const Chat: FC<IChatProps> = ({
             </div>
           }
           return (
-            <div className="w-[30%] max-w-[30%] ml-auto">
+            <div className="w-[70%] max-w-[70%] ml-auto md:w-[30%] md:max-w-[30%]">
               <Question
                 key={item.id}
                 id={item.id}
@@ -153,7 +153,7 @@ const Chat: FC<IChatProps> = ({
               {
                 visionConfig?.enabled && (
                   <>
-                    <div className='text-customDarkBlue border-2 border-[#6FFFE6] absolute bottom-2 left-2 flex items-center'>
+                    <div className={' text-customDarkBlue border-2  absolute bottom-2 left-2 flex items-center'}>
                       <div className="  ">
                         <ChatImageUploader
                           settings={visionConfig}

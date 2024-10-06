@@ -4,10 +4,10 @@ import type { ChangeEvent, FC } from 'react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { imageUpload } from './utils'
+import s from './style.module.css'
 import type { ImageFile } from '@/types/app'
 import { TransferMethod } from '@/types/app'
 import Toast from '@/app/components/base/toast'
-
 type UploaderProps = {
   children: (hovering: boolean) => JSX.Element
   onUpload: (imageFile: ImageFile) => void
@@ -78,13 +78,13 @@ const Uploader: FC<UploaderProps> = ({
 
   return (
     <div
-      className='mt-1 relative outline outline-2 outline-[#6FFFE6] text-[#003250] bg-white rounded-full !hover:bg-customDarkBlue hover:outline-customDarkBlue  hover:text-[#6FFFE6] '
+      className={`${s.customColor} mt-1 relative `}
       onMouseEnter={() => setHovering(true)}
       onMouseLeave={() => setHovering(false)}
     >
       {children(hovering)}
       <input
-        className={` 
+        className={`
           absolute block inset-0 opacity-0 text-[0] w-full  
           ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}
         `}

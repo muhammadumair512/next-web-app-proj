@@ -168,13 +168,14 @@ const Answer: FC<IAnswerProps> = ({
   return (
     <div key={id}>
       <div className='flex items-start'>
-        <div className="w-10 h-10 shrink-0">
+        <div
+
+          className="w-[25px] h-[25px] md:w-[35px] md:h-[35px] lg:w-[40px] lg:h-[40px] shrink-0">
           <img
             src="./logo.svg" // Add the path to your image here
             alt="Your Image"
             className="w-full h-full rounded-full object-cover" // Tailwind classes to style the image
-          />
-          {isResponding
+          /> {isResponding
             && <div className={s.typeingIcon}>
               <LoadingAnim type='avatar' />
             </div>
