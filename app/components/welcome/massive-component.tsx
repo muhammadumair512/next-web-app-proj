@@ -1,5 +1,4 @@
 'use client'
-
 import type { FC } from 'react'
 import React from 'react'
 import cn from 'classnames'
@@ -19,12 +18,12 @@ export const AppInfoComp: FC<{ siteInfo: AppInfo }> = ({ siteInfo }) => {
   return (
     <div>
       <div className={' flex items-center justify-center h-20px bg-gray-100 font-sans  '}>
-        <div className={`${s.bgCustom} w-full h-full flex flex-col items-center justify-center py-6 px-8 bg-white rounded-lg shadow-lg font-sans color-black`} >
-          <span className='text-3xl font-semibold text-black mb-4 '>
+        <div className={`${s.bgCustom} w-full h-full flex flex-col items-center justify-center py-6  bg-white rounded-lg shadow-lg font-sans color-black`} >
+          <span className='font-semibold text-black'>
             <Image src={headerImage} alt="Header Image" className="w-20 h-20 rounded-md object-fit mb-2"
-              style={{ maxWidth: '80%', height: 'auto' }} />
+              style={{ height: 'auto' }} />
           </span>
-          <span className='text-2xl font-medium text-black'>Link Worldwide Product Design Assistant</span>
+          <span className={` ${s.welcomeText} text`}>Link Worldwide Product Design Assistant</span>
           <span className='text-2xl font-medium text-black'></span>
         </div>
       </div>

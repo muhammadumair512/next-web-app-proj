@@ -80,8 +80,8 @@ const UploaderButton: FC<UploaderButtonProps> = ({
     >
 
       <PortalToFollowElemTrigger onClick={handleToggle}>
-        <div className={` 
-        relative flex items-center justify-center w-8 h-8 hover:bg-gray-100 rounded-lg
+        <div className={`${s.ChatImg} 
+        relative flex items-center justify-center w-8 h-8 rounded-lg
           ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}
         `}>
           <ImagePlus className='w-4 h-4 text-gray-500' />

@@ -148,13 +148,13 @@ const Chat: FC<IChatProps> = ({
       </div>
       {
         !isHideSendInput && (
-          <div className={cn(!feedbackDisabled && 'mb-[40px] !left-3.5 !right-3.5', 'absolute z-10 bottom-0 left-0 right-0 mb-2')}>
+          <div className={cn(!feedbackDisabled && 'mb-[40px] !left-3.5 !right-3.5', 'absolute z-10 bottom-0 left-0 right-0 ')}>
             <div className=' p-[5.5px] max-h-[130px] bg-white border-[1.5px] border-gray-200 rounded-xl overflow-y-auto'>
               {
                 visionConfig?.enabled && (
                   <>
-                    <div className={' text-customDarkBlue border-2  absolute bottom-2 left-2 flex items-center'}>
-                      <div className="  ">
+                    <div className={' text-customDarkBlue border-2 absolute bottom-2 left-2 flex items-center'}>
+                      <div className={`${s.ChatImg}`}>
                         <ChatImageUploader
                           settings={visionConfig}
                           onUpload={onUpload}
@@ -164,7 +164,7 @@ const Chat: FC<IChatProps> = ({
                     </div>
                     {/* <div className='mx-1 w-[1px] h-4 bg-black/5' /> */}
 
-                    <div className='pl-[52px] mt-5 mb-0  '>
+                    <div className='pl-[52px] mt-0.5 mb-0.5  '>
                       <ImageList
                         list={files}
                         onRemove={onRemove}
@@ -177,7 +177,7 @@ const Chat: FC<IChatProps> = ({
                 )
               }
               <Textarea
-                className={`${s.textArea} border-2 border-[#cdcdcd] rounded-lg h-[150px]
+                className={`${s.textArea}  rounded-lg h-[150px]
                   block w-full   leading-5  text-sm text-gray-700 outline-none appearance-none resize-none
                   ${visionConfig?.enabled && 'pl-12'}
                 `}
@@ -198,7 +198,7 @@ const Chat: FC<IChatProps> = ({
                     </div>
                   }
                 >
-                  <div className={`${s.sendBtn} hover:bg-customDarkBlue w-8 h-8 cursor-pointer rounded-md`} onClick={handleSend}></div>
+                  <div className={`${s.sendBtn}  w-8 h-8 cursor-pointer rounded-md`} onClick={handleSend}></div>
                 </Tooltip>
               </div>
             </div>
