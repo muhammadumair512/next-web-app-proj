@@ -78,9 +78,9 @@ const Uploader: FC<UploaderProps> = ({
 
   return (
     <div
-      className={`${s.customColor} mt-1 relative `}
-      onMouseEnter={() => setHovering(true)}
-      onMouseLeave={() => setHovering(false)}
+      className={`${s.customColor} mt-1 relative font-sans `}
+    // onMouseEnter={() => setHovering(true)}
+    // onMouseLeave={() => setHovering(false)}
     >
       {children(hovering)}
       <input

@@ -1,6 +1,7 @@
 import type { FC } from 'react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import s from './style.module.css'
 import Uploader from './uploader'
 import ImageLinkInput from './image-link-input'
 import ImagePlus from '@/app/components/base/icons/line/image-plus'
@@ -28,11 +29,11 @@ const UploadOnlyFromLocal: FC<UploadOnlyFromLocalProps> = ({
       <Uploader onUpload={onUpload} disabled={disabled} limit={limit}>
         {
           hovering => (
-            <div className={` 
+            <div className={`${s.customIcon} 
               relative flex items-center justify-center w-8 h-8 rounded-lg cursor-pointer
               ${hovering && 'bg-gray-100'}
             `}>
-              <ImagePlus className='w-4 h-4 text-gray-500' />
+              <ImagePlus className='flex w-4 h-4 text-gray-500 mt-3' />
             </div>
           )
         }
@@ -93,15 +94,15 @@ const UploaderButton: FC<UploaderButtonProps> = ({
             hasUploadFromLocal && (
               <>
                 <div className='flex items-center mt-2 px-2 text-xs font-medium text-gray-400'>
-                  <div className='mr-3 w-[93px] h-[1px] bg-gradient-to-l from-[#F3F4F6]' />
+                  <div className='flex-grow mr-3 w-[93px] h-[1px] bg-gradient-to-l from-[#F3F4F6]' />
                   OR
-                  <div className='ml-3 w-[93px] h-[1px] bg-gradient-to-r from-[#F3F4F6]' />
+                  <div className='flex-grow ml-3 w-[93px] h-[1px] bg-gradient-to-r from-[#F3F4F6]' />
                 </div>
                 <Uploader onUpload={handleUpload} limit={limit}>
                   {
                     hovering => (
                       <div className={`
-                        flex items-center justify-center h-8 text-[13px] font-medium text-[#155EEF] rounded-lg cursor-pointer
+                        flex items-center justify-center h-8 text-[13px] font-medium  rounded-lg cursor-pointer
                         ${hovering && 'bg-primary-50'}
                       `}>
                         <Upload03 className='mr-1 w-4 h-4' />

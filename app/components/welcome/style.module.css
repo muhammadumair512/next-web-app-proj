@@ -34,17 +34,18 @@
 
 /* till here */
 .bgCustom {
-  background-color: #003250; /* Custom background color */
+  /* background-color: #003250; */
 }
 .customColor {
   box-sizing: border-box;
   background-color: white;
   color: #003250;
-  border: solid 2px #6fffe6;
+  border: solid 1px #6fffe6;
+  border-radius: 9999px;
 }
 .customColor:hover {
   background-color: #003250;
-  border: 2px solid #003250;
+  border: 1px solid #003250;
   color: #6fffe6;
 }
 .bgGrayColor {

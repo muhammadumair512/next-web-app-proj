@@ -18,14 +18,14 @@ export const AppInfoComp: FC<{ siteInfo: AppInfo }> = ({ siteInfo }) => {
   const { t } = useTranslation()
   return (
     <div>
-      <div className={' flex items-center justify-center h-20px bg-gray-100 font-sans '}>
-        <div className={`${s.bgCustom} flex flex-col items-center justify-center py-6 px-8 bg-white rounded-lg shadow-lg font-sans color-white`} >
-          <span className='text-3xl font-semibold text-white mb-4 '>
-            <Image src={headerImage} alt="Header Image" className="w-20 h-20 rounded-md object-fit -mb-7"
-              style={{ maxWidth: '100%', height: 'auto' }} />
-            Welcome to</span>
-          <span className='text-2xl font-medium text-white'>Link Product Design Assistant</span>
-          <span className='text-2xl font-medium text-white'>(Coca-Cola) Chat App</span>
+      <div className={' flex items-center justify-center h-20px bg-gray-100 font-sans  '}>
+        <div className={`${s.bgCustom} w-full h-full flex flex-col items-center justify-center py-6 px-8 bg-white rounded-lg shadow-lg font-sans color-black`} >
+          <span className='text-3xl font-semibold text-black mb-4 '>
+            <Image src={headerImage} alt="Header Image" className="w-20 h-20 rounded-md object-fit mb-2"
+              style={{ maxWidth: '80%', height: 'auto' }} />
+          </span>
+          <span className='text-2xl font-medium text-black'>Link Worldwide Product Design Assistant</span>
+          <span className='text-2xl font-medium text-black'></span>
         </div>
       </div>
       <p className='text-sm text-gray-500'>{siteInfo.description}</p>

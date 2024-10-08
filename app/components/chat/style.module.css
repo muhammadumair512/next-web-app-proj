@@ -52,7 +52,7 @@
 .questionIcon {
   background: url(./icons/default-avatar.jpg) no-repeat;
   background-size: contain;
-  border-radius: 50%;
+  border-radius: 9999px;
   width: 25px;
   height: 25px;
   flex-shrink: 0;
