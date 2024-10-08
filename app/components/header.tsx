@@ -48,7 +48,7 @@ const Header: FC<IHeaderProps> = ({
       {/*  removed classes flex items-start space-x-4 ml-0 */}
       <div className="flex-grow flex items-center justify-center space-x-4 ">
         <AppIcon size="small" />
-        <div className="text-sm  font-bold font-sans text-[#003250]  ">
+        <div className="text-sm  font-bold font-sans text-[#003250] text-center ">
           LINK PRODUCT DESIGN ASSISTANT (COCA-COLA)
         </div>
       </div>

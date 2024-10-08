@@ -101,6 +101,7 @@
 }
 
 .textArea {
+  height: 150px;
   padding-top: 13px;
   padding-bottom: 13px;
   padding-right: 90px;

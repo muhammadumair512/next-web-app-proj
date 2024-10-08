@@ -149,7 +149,7 @@ const Chat: FC<IChatProps> = ({
       {
         !isHideSendInput && (
           <div className={cn(!feedbackDisabled && 'mb-[40px] !left-3.5 !right-3.5', 'absolute z-10 bottom-0 left-0 right-0 mb-2')}>
-            <div className=' p-[5.5px] max-h-[150px] bg-white border-[1.5px] border-gray-200 rounded-xl overflow-y-auto'>
+            <div className=' p-[5.5px] max-h-[130px] bg-white border-[1.5px] border-gray-200 rounded-xl overflow-y-auto'>
               {
                 visionConfig?.enabled && (
                   <>
@@ -162,9 +162,9 @@ const Chat: FC<IChatProps> = ({
                         />
                       </div>
                     </div>
-                    <div className='mx-1 w-[1px] h-4 bg-black/5' />
+                    {/* <div className='mx-1 w-[1px] h-4 bg-black/5' /> */}
 
-                    <div className='pl-[52px]   '>
+                    <div className='pl-[52px] mt-5 mb-0  '>
                       <ImageList
                         list={files}
                         onRemove={onRemove}
@@ -177,8 +177,8 @@ const Chat: FC<IChatProps> = ({
                 )
               }
               <Textarea
-                className={`border-2 border-[#cdcdcd] rounded-lg
-                  block w-[90%] mr-1  px-2 pr-[118px] py-[7px] leading-5 max-h-none text-sm text-gray-700 outline-none appearance-none resize-none
+                className={`${s.textArea} border-2 border-[#cdcdcd] rounded-lg h-[150px]
+                  block w-full   leading-5  text-sm text-gray-700 outline-none appearance-none resize-none
                   ${visionConfig?.enabled && 'pl-12'}
                 `}
                 value={query}
