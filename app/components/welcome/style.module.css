@@ -97,7 +97,7 @@
 }
 @media (max-width: 534px) {
   .headerHdg {
-    font-size: 0.5rem !important;
+    font-size: 0.3rem !important;
   }
 }
 
@@ -110,8 +110,9 @@
   font-weight: 700;
   color: black;
 }
-@media (500px) {
+@media (max-width: 440px) {
   .welcomeText {
     font-size: 0.5rem !important;
+    padding-left: 5px;
   }
 }

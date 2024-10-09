@@ -143,3 +143,13 @@
 .ChatImg:hover {
   background-color: #ebf5ff !important;
 }
+.ans {
+  /* margin-bottom: 30px; */
+  /* for adding margin to last ans */
+  margin-bottom: 45px !important;
+}
+/* .space-y-\[30px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(35px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(35px * calc(1 - var(--tw-space-y-reverse)));
+} */

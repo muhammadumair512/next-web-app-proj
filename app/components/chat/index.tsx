@@ -120,11 +120,11 @@ const Chat: FC<IChatProps> = ({
   return (
     <div className={cn(!feedbackDisabled && 'px-0', 'mr-0px', 'h-full')}>
       {/* Chat List */}
-      <div className={`${s.customScrollbar} pl-[20px] pr-[20px] overflow-x-hidden  h-full space-y-[30px] `}>
+      <div className={`${s.customScrollbar} pl-[20px] pr-[20px] overflow-x-hidden overflow-y-auto  h-full space-y-[30px] `}>
         {chatList.map((item) => {
           if (item.isAnswer) {
             const isLast = item.id === chatList[chatList.length - 1].id
-            return <div className="w-[90%] md:w-[70%]"><Answer
+            return <div className={`${s.ans} w-[90%] md:w-[70%] `}><Answer
               key={item.id}
               item={item}
               feedbackDisabled={feedbackDisabled}
@@ -163,8 +163,7 @@ const Chat: FC<IChatProps> = ({
                       </div>
                     </div>
                     {/* <div className='mx-1 w-[1px] h-4 bg-black/5' /> */}
-
-                    <div className='pl-[52px] mt-0.5 mb-0.5  '>
+                    <div className='pl-[52px] mt-0.5 mb-0.5   '>
                       <ImageList
                         list={files}
                         onRemove={onRemove}
@@ -177,7 +176,7 @@ const Chat: FC<IChatProps> = ({
                 )
               }
               <Textarea
-                className={`${s.textArea}  rounded-lg h-[150px]
+                className={`${s.textArea}    rounded-lg h-[150px]
                   block w-full   leading-5  text-sm text-gray-700 outline-none appearance-none resize-none
                   ${visionConfig?.enabled && 'pl-12'}
                 `}

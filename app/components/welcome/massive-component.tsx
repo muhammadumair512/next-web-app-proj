@@ -17,10 +17,10 @@ export const AppInfoComp: FC<{ siteInfo: AppInfo }> = ({ siteInfo }) => {
   const { t } = useTranslation()
   return (
     <div>
-      <div className={' flex items-center justify-center h-20px bg-gray-100 font-sans  '}>
+      <div className={' flex items-center justify-center h-20px bg-gray-100 font-sans -mt-[15%]  '}>
         <div className={`${s.bgCustom} w-full h-full flex flex-col items-center justify-center py-6  bg-white rounded-lg shadow-lg font-sans color-black`} >
           <span className='font-semibold text-black'>
-            <Image src={headerImage} alt="Header Image" className="w-20 h-20 rounded-md object-fit mb-2"
+            <Image src={headerImage} alt="Header Image" className="w-20 h-20 rounded-md object-fit mb-3"
               style={{ height: 'auto' }} />
           </span>
           <span className={` ${s.welcomeText} text`}>Link Worldwide Product Design Assistant</span>

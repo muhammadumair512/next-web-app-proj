@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
-  // mode: 'jit',
+  mode: 'jit',
   content: [
     './pages/**/*.{js,ts,jsx,tsx}', // Include files in the 'pages' folder
     './layouts/**/*.{js,ts,jsx,tsx}', // Include files in the 'layouts' folder
